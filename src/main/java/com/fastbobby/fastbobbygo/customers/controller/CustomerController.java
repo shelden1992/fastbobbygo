@@ -20,7 +20,7 @@ public class CustomerController {
         service.saveCustomer(customer);
     }
 
-    @GetMapping("/add")
+    @GetMapping("/get")
     @ResponseBody
     public Customer getCustomer(@RequestParam("id") UUID id) {
         return service.getCustomer(id);

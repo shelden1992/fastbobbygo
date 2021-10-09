@@ -1,6 +1,6 @@
 package com.fastbobby.fastbobbygo.mechanics;
 
-import com.fastbobby.fastbobbygo.deals.Deal;
+import com.fastbobby.fastbobbygo.deals.model.Deal;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
