@@ -4,11 +4,12 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
-/**
- * Created by Shelupets Denys on 09.10.2021.
- */
+import java.util.Date;
+
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Customer {
-    Long id;
+public class Car {
+    String model;
+    Date year;
+    Vehicle vehicle;
 }
