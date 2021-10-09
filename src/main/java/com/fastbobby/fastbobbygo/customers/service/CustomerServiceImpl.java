@@ -2,6 +2,7 @@ package com.fastbobby.fastbobbygo.customers.service;
 
 import com.fastbobby.fastbobbygo.customers.model.Customer;
 import com.fastbobby.fastbobbygo.customers.repository.CustomerRepository;
+import com.fastbobby.fastbobbygo.customers.repository.CustomerRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +22,8 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.getById(customer);
     }
 
-    public void deleteCustomer(Long customer) {
-        customerRepository.deleteById(customer);
+    public void deleteCustomer(Long id) {
+        customerRepository.deleteById(id);
     }
 
     public Customer updateCustomer(Customer customer) {
