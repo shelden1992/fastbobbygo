@@ -1,23 +1,16 @@
 package com.fastbobby.fastbobbygo.customers.service;
 
 import com.fastbobby.fastbobbygo.customers.model.Customer;
-import com.fastbobby.fastbobbygo.customers.repository.CustomerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 /**
  * Created by Shelupets Denys on 09.10.2021.
  */
-@Service
-public class CustomerService {
-    @Autowired
-    private CustomerRepository customerRepository;
+public interface CustomerService {
+    Customer saveCustomer(Customer customer);
 
-    public Customer saveCustomer(Customer customer) {
-        return customerRepository.save(customer);
-    }
+    Customer getCustomer(Long customer);
 
-    public Customer getCustomer(Long customer) {
-         return customerRepository.getById(customer);
-    }
+    void deleteCustomer(Long customer);
+
+    Customer updateCustomer(Customer customer);
 }
