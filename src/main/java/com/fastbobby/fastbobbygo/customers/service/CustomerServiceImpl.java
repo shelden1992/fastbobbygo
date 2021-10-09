@@ -2,9 +2,10 @@ package com.fastbobby.fastbobbygo.customers.service;
 
 import com.fastbobby.fastbobbygo.customers.model.Customer;
 import com.fastbobby.fastbobbygo.customers.repository.CustomerRepository;
-import com.fastbobby.fastbobbygo.customers.repository.CustomerRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.UUID;
 
 /**
  * Created by Shelupets Denys on 09.10.2021.
@@ -18,11 +19,11 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.save(customer);
     }
 
-    public Customer getCustomer(Long customer) {
+    public Customer getCustomer(UUID customer) {
         return customerRepository.getById(customer);
     }
 
-    public void deleteCustomer(Long id) {
+    public void deleteCustomer(UUID id) {
         customerRepository.deleteById(id);
     }
 

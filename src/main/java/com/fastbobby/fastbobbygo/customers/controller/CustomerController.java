@@ -5,6 +5,8 @@ import com.fastbobby.fastbobbygo.customers.service.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 /**
  * Created by Shelupets Denys on 09.10.2021.
  */
@@ -20,12 +22,12 @@ public class CustomerController {
 
     @GetMapping("/add")
     @ResponseBody
-    public Customer getCustomer(@RequestParam("id") Long id) {
+    public Customer getCustomer(@RequestParam("id") UUID id) {
         return service.getCustomer(id);
     }
 
     @DeleteMapping("/delete")
-    public void deleteCustomer(@RequestParam("id") Long id) {
+    public void deleteCustomer(@RequestParam("id") UUID id) {
         service.deleteCustomer(id);
     }
 

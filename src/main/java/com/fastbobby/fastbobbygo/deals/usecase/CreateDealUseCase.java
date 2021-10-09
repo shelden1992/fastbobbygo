@@ -1,5 +1,7 @@
 package com.fastbobby.fastbobbygo.deals.usecase;
 
+import com.fastbobby.fastbobbygo.customers.model.Customer;
+import com.fastbobby.fastbobbygo.customers.repository.CustomerRepository;
 import com.fastbobby.fastbobbygo.deals.dtos.CreateDealDto;
 import com.fastbobby.fastbobbygo.deals.dtos.DealDto;
 import com.fastbobby.fastbobbygo.deals.mapper.DealMapper;

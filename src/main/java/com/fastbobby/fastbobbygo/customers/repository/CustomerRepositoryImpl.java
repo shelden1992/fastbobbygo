@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * Created by Shelupets Denys on 09.10.2021.
@@ -24,12 +25,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return customer;
     }
 
-    public Customer getById(Long id) {
+    public Customer getById(UUID id) {
         return customers.stream().filter(customer -> Objects.equals(customer.getId(), id)).findFirst().orElse(null);
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(UUID id) {
         Customer byId = getById(id);
         if (byId != null) {
             customers.remove(byId);
