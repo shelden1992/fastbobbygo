@@ -1,6 +1,6 @@
 package com.fastbobby.fastbobbygo.deals;
 
-import com.fastbobby.fastbobbygo.customers.Customer;
+import com.fastbobby.fastbobbygo.customers.model.Customer;
 import com.fastbobby.fastbobbygo.shops.model.Shop;
 
 /**
